@@ -26,29 +26,30 @@
         .font-description {
             font-family: "Sora", serif;
         }
-        .pet-animation {
-            /* height: 50px;
-            width: 50px;
-            border: green solid 2px;
-            border-radius: 50%; */
-            /* top: 50%;
-            left: 50%; */
-            /* translate: -50% -50%; */
-            position: absolute;
-            animation: animation-cat 8s ease-in-out 0.5s infinite alternate;
+        .first-animation {
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            border: 5px solid #FFDC26;
+            position:absolute;
+            z-index: 10;
+            left: 50%;
+            /* translate: -50%; */
+            animation: assignment-3 3s ease-in-out 0.5s infinite alternate;
+
         }
-        @keyframes animation-cat {
+        @keyframes assignment-3 {
             0% {
-                left: 0;
-                top: 0;
+                transform: rotateX(0) rotateY(0) rotate(0);
             }
             50% {
-                left: 70%;
-                top: 0;
+                transform: rotateX(180deg) rotateY(0) rotate(0);
+            }
+            75% {
+                transform: rotateX(180deg) rotateY(180deg) rotate(0);
             }
             100% {
-                left: 0;
-                top: 0;
+                transform: rotateX(180deg) rotateY(180deg) rotate(180deg);
             }
         }
      </style>
@@ -84,7 +85,8 @@
                     </div>
                     <div class="dropdown relative lg:hidden">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ">
-                          <svg
+                            <i class="fa-solid fa-bars"></i>
+                          <!-- <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5 text-white"
                             fill="none"
@@ -95,7 +97,7 @@
                               stroke-linejoin="round"
                               stroke-width="2"
                               d="M4 6h16M4 12h8m-8 6h16" />
-                          </svg>
+                          </svg> -->
                         </div>
                         <ul
                           tabindex="0"
@@ -118,7 +120,12 @@
             <!-- hero -->
 
              <div class="w-[90%] mx-auto lg:mt-12 sm:mt-48 relative mb-10">
-                 
+
+                <!-- animation start -->
+                 <div class="first-animation fixed">
+
+                 </div>
+                 <!-- animation end -->
                 <div class="lg:w-5/12  space-y-4 pt-6 sm:absolute lg:top-10 sm:-top-40">
                     <h1 class="font-title text-6xl text-[#111111]">Pamper Your Pet, Because They Deserve the Bes</h1>
                     <p class="fotn-description text-xl text-[rgb(17,17,17)]">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
@@ -240,7 +247,7 @@
                             </div>
                             <div class="flex items-center gap-5 bg-white py-2 lg:pl-6 pl-2 rounded-lg transition ease-in-out hover:-translate-y-3 hover:scale-100 delay-100 duration-150 hover:bg-[#F9DF8A] cursor-pointer">
                                 <div class="bg-[#FFF9F4] rounded-lg p-2">
-                                    <img src="c1-assets/brid-cartoon.png" alt="">
+                                    <img src="c1-assets/bird-cartoon.png" alt="">
                                 </div>
                                 <div>
                                     <i class="fa-solid fa-star text-orange-500"></i> <span class="font-bold">4.5</span>
@@ -302,18 +309,10 @@
                     </div>
                 </div>
             </section>
-            <!-- Animation -->
-            <section class="h-80 w-[90%] mx-auto relative bg-green-500">
-                <div class="pet-animation w-48">
-                    <div class="flex items-center">
-                        <img class="w-full"  src="c1-assets/cute-pet-small.png" alt=""> 
-                        <h3 class="font-title text-4xl font-bold">Enjoy <br> With <br> Pet</h3>
-                    </div>
-                </div>
-            </section>
+
             <!-- Tending pet foods -->
 
-            <section class="bg-[#fff9f4]">
+            <section class="bg-[#fff9f4] mt-10">
                 <div class="w-[90%] mx-auto lg:py-36 py-10">
                     <h2 class="text-4xl font-title font-medium my-8 mx-5 lg:mx-0">Trending Foods for Pets </h2>
                     <div class="lg:flex gap-7 space-y-7 lg:space-y-0 mx-5 lg:mx-0">
@@ -427,21 +426,21 @@
                 <h2 class="text-4xl font-title font-medium my-8 mx-5 lg:mx-0">Every Law Price</h2>
                 <div class="lg:flex gap-5 space-y-5 lg:space-y-0">
                     
-                    <div class="lg:w-2/3 bg-gradient-to-r from-[#F8CCFBFF] to-[#ACD2FDFF] flex justify-between items-center lg:pl-20 px-3 py-4 rounded-xl">
-                        <div>
-                            <p class="font-description text-xl font-medium text-[#000000]">Under Price</p>
+                    <div class="lg:w-2/3 bg-gradient-to-r from-[#F8CCFBFF] to-[#ACD2FDFF]lg:pl-20 px-3 py-4 rounded-xl relative h-[550px]">
+                        <div class="lg:ml-20 lg:mt-10">
+                            <p class="font-description text-xl font-medium text-[#000000] hidden lg:flex">Under Price</p>
                             <h3 class="font-title font-medium text-3xl text-[#000000] my-2">Pet Grooming Mitt</h3>
-                            <p class="font-title font-medium text-2xl text-white">(Easy Hare Removal)</p>
-                            <h4 class="font-title font-medium text-6xl text-[#000000] mt-3">$7.99</h4>
+                            <p class="font-title font-medium text-2xl text-white hidden lg:flex">(Easy Hare Removal)</p>
+                            <h4 class="font-title font-medium lg:text-6xl text-4xl text-[#000000] mt-3">$7.99</h4>
                         </div>
-                        <div>
+                        <div class="absolute -right-16 top-12 sm:top-16 sm:-right-16 md:top-8 md:right-0 lg:top-16 lg:-right-5 2xl:top-12 2xl:right-20">
                             <img src="c1-assets/cute-dog-mid.png" alt="">
                         </div>
                     </div>
                     <div class="lg:w-1/3 bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] relative h-[550px] rounded-xl px-3">
                         <div class="pt-10 lg:pl-10">
-                            <h2 class="text-4xl font-title font-medium my-8 lg:mx-0 text-[#000000]">T-Shirt for Tog</h2>
-                            <h4 class="font-title font-medium text-6xl text-[#FFDC26] mt-3">$7.99</h4>
+                            <h2 class="lg:text-4xl text-3xl font-title font-medium my-8 lg:mx-0 text-[#000000]">T-Shirt for Tog</h2>
+                            <h4 class="font-title font-medium lg:text-6xl text-4xl text-[#FFDC26] mt-3">$7.99</h4>
                         </div>
                         <div >
                             <img class="absolute right-2 top-32"  src="c1-assets/cute-pet-mid.png" alt="">

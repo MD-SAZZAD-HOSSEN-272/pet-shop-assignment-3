@@ -1,0 +1,72 @@
+/* all fonts */
+.font-title {
+    font-family: "ADLaM Display", serif;
+}
+.font-description {
+    font-family: "Sora", serif;
+}
+
+/* all animations */
+
+.first-animation {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border: 5px solid #FFDC26;
+    position:absolute;
+    z-index: 10;
+    left: 50%;
+    /* translate: -50%; */
+    animation: assignment-3 3s ease-in-out 0.5s infinite alternate;
+
+}
+@keyframes assignment-3 {
+    0% {
+        transform: rotateX(0) rotateY(0) rotate(0);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(0) rotate(0);
+    }
+    75% {
+        transform: rotateX(180deg) rotateY(180deg) rotate(0);
+    }
+    100% {
+        transform: rotateX(180deg) rotateY(180deg) rotate(180deg);
+    }
+}
+.text {
+    height: 50px;
+    width: 100%;
+    position:absolute;
+    animation: banner-ani 8s ease-in-out 0.5s infinite alternate;
+}
+@keyframes banner-ani {
+    from {
+        transform: translate(90%);
+    }
+    
+}
+.banner-animation {
+    animation: animation 1s linear 0.5s;
+}
+
+@keyframes animation {
+    0% {
+        transform: translate(-400px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.banner-img-animation {
+    animation: img-animation 1s linear 1s;
+}
+@keyframes img-animation {
+    0% {
+        transform: translateY(300px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}

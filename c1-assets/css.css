@@ -15,7 +15,8 @@
     border: 5px solid #FFDC26;
     position:absolute;
     z-index: 10;
-    left: 50%;
+    top: 20%;
+    left: 80%;
     /* translate: -50%; */
     animation: assignment-3 3s ease-in-out 0.5s infinite alternate;
 
@@ -34,17 +35,17 @@
         transform: rotateX(180deg) rotateY(180deg) rotate(180deg);
     }
 }
-.text {
-    height: 50px;
-    width: 100%;
-    position:absolute;
-    animation: banner-ani 8s ease-in-out 0.5s infinite alternate;
+
+.nav-animation {
+    animation: nav-animation-fixed 1s linear 1s;
 }
-@keyframes banner-ani {
-    from {
-        transform: translate(90%);
+@keyframes nav-animation-fixed {
+    0% {
+        transform: translateY(-200px);
     }
-    
+    100% {
+        transform: translateY(0px);
+    }
 }
 .banner-animation {
     animation: animation 1s linear 0.5s;

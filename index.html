@@ -24,9 +24,9 @@
 </head>
 <body>
     <!-- header -->
-    <header>
+    <header class="relative">
         <!-- navbar -->
-        <nav class="bg-[#FFF9F4]">
+        <nav class="bg-[#FFF9F4] fixed w-full z-20 top-0 nav-animation">
             <div class="w-[90%] mx-auto flex  justify-between py-5 px-5 lg:px-0">
                 <div>
                     <div class="flex items-center gap-2 text-4xl font-title">
@@ -41,7 +41,7 @@
                               <li><a href="">Breeds</a></li>
                               <li><a>Contact Us</a></li>
                             </ul>
-                          </div> 
+                        </div> 
                 </div>
                 <div>
                         <div class="space-x-4 hidden lg:flex items-center">
@@ -66,8 +66,7 @@
                             <div class="flex justify-around">
                                 <i class="fa-regular fa-bell btn flex"></i>
                                 <i class="fa-solid fa-magnifying-glass btn flex"></i>
-                            </div>
-                            
+                            </div>  
                         </ul>
                 </div>
             </div>
@@ -75,13 +74,13 @@
 
             <!-- hero -->
 
-             <div class="w-[90%] mx-auto lg:mt-12 sm:mt-48 relative mb-10">
+            <div class="w-[90%] mx-auto lg:mt-12 sm:mt-48 relative mb-10">
                 <!-- animation start -->
                  <div class="first-animation fixed">
 
                  </div>
                  <!-- animation end -->
-                <div class="lg:w-5/12 banner-animation space-y-4 pt-6 sm:absolute lg:top-10 sm:-top-40 z-10">
+                <div class="lg:w-5/12 banner-animation space-y-4 pt-24 sm:pt-6 sm:absolute lg:top-10 sm:-top-28 z-10">
                     <h1 class="font-title lg:text-6xl text-4xl text-[#111111]">Pamper Your Pet, Because They Deserve the Bes</h1>
                     <p class="fotn-description text-xl text-[rgb(17,17,17)]">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
                     <button class="btn bg-[#FFDC26] hover:bg-[#FFDC26] animate-bounce hover:animate-none">Find Your Pet</button>
@@ -89,7 +88,7 @@
                 <div class="">
                     <img class="bg-no-repeat bg-cover w-full banner-img-animation" src="c1-assets/cat-big.png" alt="">
                 </div>
-             </div>
+            </div>
     </header>
     <main class="mt-12">
         <!-- browse by categories -->
@@ -163,8 +162,8 @@
                             
                                 <h4 class="text-3xl font-title font-medium">T-shirt For Dog</h4>
                                 <p class="fotn-description text-xl text-[rgb(17,17,17)]   mt-5 mb-8">Discover a world of treats toys and essentials handpicked for</p>
-                                <button class="btn bg-[white] text-[#111111] z-10">Shope Now</button>
-                                <div class="absolute right-2 top-40">
+                                <button class="btn bg-[white] text-[#111111] z-20">Shope Now</button>
+                                <div class="absolute right-2 top-40 -z-0">
                                     <img  src="c1-assets/cute-pet-mid.png" alt="">
                                 </div>
                         
@@ -275,7 +274,7 @@
                             <h4 class="text-3xl font-title font-medium">Foods For Dog</h4>
                             <p class="fotn-description text-xl text-[rgb(17,17,17)]   mt-5 mb-8">Discover a world of treats toys and essentials handpicked for</p>
                             <button class="btn bg-[white] text-[#111111] z-10">Buy Now</button>
-                            <div class="absolute right-2 lg:top-60 top-40">
+                            <div class="absolute right-2 lg:top-60 md:top-40 sm:top-40 tp-80">
                                 <img  src="dog-eat.png" alt="">
                             </div>
                         </div>
